@@ -35,7 +35,7 @@ module.exports.insertData = function(boxName,boxNote,pipeLineKey,streakApi){
         var sql = 'update magento_streak set boxname = "'+boxName.trim()+'",boxnote = "'+boxNote.trim()+'",pipelinekey="'+pipeLineKey+'",streak_api="'+streakApi+'" where boxname="'+boxName.trim()+'" and boxnote= "'+boxNote+'" and streak_api = "'+streakApi.trim()+'"';  
           con.query(sql, function (err, result) {
               if (err) throw err;
-              console.log("data updated");   
+              //console.log("data updated");   
           });
         }else if(result[0].boxnote != boxNote){
               //if change in note for same box insert
